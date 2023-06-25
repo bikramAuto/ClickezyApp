@@ -1,5 +1,6 @@
 package com.clickezy.base;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,6 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class base {
 	WebDriver driver;
 	WebDriverWait wait;
+	protected By city = By.xpath("//li[@class='py-3 last:pb-0 sm:p-2 cursor-pointer hover:bg-slate-100 flex align-middle items-center rounded-md']");
 	
 	@Test(priority=1)
 	protected void lunch() throws InterruptedException {
@@ -19,7 +21,12 @@ public class base {
 		wait= new WebDriverWait(driver, (50));
 		driver.get("https://clickezy-dev.netlify.app/");
 		Thread.sleep(1000);
-		driver.quit();
+//		driver.quit();
+		
+	}
+	
+	@Test(priority=2)
+	protected void SelectCity() {
 		
 	}
 	
