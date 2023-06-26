@@ -9,6 +9,7 @@ public class Signup extends base {
 	@Test
 	protected void signup() throws Exception {
 		lunch();
+		SelectCity();
 		driver.findElement(credential).click();
 	}
 	
