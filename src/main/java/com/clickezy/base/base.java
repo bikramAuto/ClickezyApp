@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class base {
-	WebDriver driver;
+	protected WebDriver driver;
 	WebDriverWait wait;
 	protected By city = By.xpath("//p[@class='text-lg text-gray-900 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
