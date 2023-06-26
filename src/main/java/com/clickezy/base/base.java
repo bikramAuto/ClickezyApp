@@ -1,8 +1,13 @@
 package com.clickezy.base;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -11,7 +16,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class base {
 	WebDriver driver;
 	WebDriverWait wait;
-	protected By city = By.xpath("//li[@class='py-3 last:pb-0 sm:p-2 cursor-pointer hover:bg-slate-100 flex align-middle items-center rounded-md']");
+//	Integer City;
+	protected By city = By.xpath("//p[@class='text-lg text-gray-900 truncate dark:text-white']");
 	
 	@Test(priority=1)
 	protected void lunch() throws InterruptedException {
@@ -26,8 +32,20 @@ public class base {
 	}
 	
 	@Test(priority=2)
-	protected void SelectCity() {
+	protected void SelectCity() throws Exception {
+		wait= new WebDriverWait(driver, (50));
+		List <WebElement> City = driver.findElements(city);
+//		City = driver.findElement(city).getText();
+//		City = wait.until(ExpectedConditions.visibilityOfElementLocated(city)).getSize();
 		
+		
+		System.out.println("Citys: "+City.size());
+		for(int i=1;i<=City.size();i++) {
+			System.out.println(City.get(i));
+		}
+		
+		
+//		driver.quit();
 	}
 	
 	protected void SignUp() {

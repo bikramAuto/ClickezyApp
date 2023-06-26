@@ -5,7 +5,7 @@
     <classes>
       <class name="com.clickezy.base.base">
         <methods>
-          <include name="lunch"/>
+          <include name="SelectCity"/>
         </methods>
       </class> <!-- com.clickezy.base.base -->
     </classes>
