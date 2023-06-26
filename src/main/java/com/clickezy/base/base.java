@@ -43,13 +43,16 @@ public class base {
 			
 		}
 		
-		Thread.sleep(2000);
-		driver.quit();
+		
 	}
 	
 	@Test(priority=3)
-	protected void SignUp() {
+	protected void SignUp() throws InterruptedException {
 		driver.findElement(credential).click();
+		
+		
+		Thread.sleep(2000);
+		driver.quit();
 		
 	}
 	
