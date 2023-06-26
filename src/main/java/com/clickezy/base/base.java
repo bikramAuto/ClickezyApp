@@ -15,6 +15,7 @@ public class base {
 	WebDriver driver;
 	WebDriverWait wait;
 	protected By city = By.xpath("//p[@class='text-lg text-gray-900 truncate dark:text-white']");
+	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
 	
 	@Test(priority=1)
 	protected void lunch() throws InterruptedException {
@@ -34,14 +35,21 @@ public class base {
 		System.out.println("Citys: "+City.size());
 		for(int i=0;i<City.size();i++) {
 			System.out.println(City.get(i).getText());
+			String cty = City.get(i).getText();
+			if(cty.equals("Bhubaneswar")) {
+				driver.findElement(city).click();
+				break;
+			}
+			
 		}
 		
-		
+		Thread.sleep(2000);
 		driver.quit();
 	}
 	
+	@Test(priority=3)
 	protected void SignUp() {
-		
+		driver.findElement(credential).click();
 		
 	}
 	
