@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.clickezy.base.data.Data;
@@ -23,6 +24,23 @@ public class base extends Data {
 	protected By checkbox = By.xpath("//input[@type='checkbox']");
 	protected By resend = By.xpath("//button[text()='resend']");
 	protected By sup = By.xpath("//button[text()='Signup']");
+	protected By Sotp = By.xpath("//input[@name='otp']");
+	protected By Osubmit = By.xpath("//button[text()='Confirm']");
+	
+	protected void Sotp() throws Exception {
+		
+		char[] otp = Otp.toCharArray();
+		System.out.println("inside sOtp");
+		//driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"Input\"]"));
+		for (int i = 0; i < otp.length; i++) {
+			int a = i+1;
+            wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("(//input[@name='otp'])["+ a +"]")))
+                    .sendKeys(otp[i] + "");
+           
+        	}
+		
+	}
 	
 	protected void MailSAC() throws InterruptedException {
 		WebDriver drive;
@@ -98,7 +116,8 @@ public class base extends Data {
 	
 	protected void SelectCity() throws Exception {
 		wait= new WebDriverWait(driver, (50));
-		List <WebElement> City = driver.findElements(city);		
+		List <WebElement> City = driver.findElements(city);
+//		List <WebElement> City = wait.until(ExpectedConditions.visibilityOfElementLocated(city));
 		System.out.println("Citys: "+City.size());
 		for(int i=0;i<City.size();i++) {
 			System.out.println(City.get(i).getText());

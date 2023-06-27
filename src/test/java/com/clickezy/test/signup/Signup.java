@@ -18,6 +18,8 @@ public class Signup extends base {
 				).sendKeys(NewMail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(checkbox)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(sup)).click();
+		Sotp();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 //		driver.findElement(checkbox).click();
 //		MailSAC();
 		
