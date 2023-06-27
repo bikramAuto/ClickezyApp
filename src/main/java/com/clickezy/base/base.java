@@ -27,19 +27,19 @@ public class base extends Data {
 	protected By Sotp = By.xpath("//input[@name='otp']");
 	protected By Osubmit = By.xpath("//button[text()='Confirm']");
 	
-	protected void Sotp() throws Exception {
+	protected void SignupInformation() {
 		
+	}
+	
+	protected void Sotp() throws Exception {		
 		char[] otp = Otp.toCharArray();
 		System.out.println("inside sOtp");
-		//driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"Input\"]"));
 		for (int i = 0; i < otp.length; i++) {
 			int a = i+1;
             wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("(//input[@name='otp'])["+ a +"]")))
-                    .sendKeys(otp[i] + "");
-           
-        	}
-		
+                    .sendKeys(otp[i] + "");           
+        	}		
 	}
 	
 	protected void MailSAC() throws InterruptedException {
