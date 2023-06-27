@@ -37,13 +37,16 @@ public class base extends Data {
 	protected By citi = By.xpath("//input[@name='address[0].city']");
 	protected By pin = By.xpath("//input[@name='address[0].zip']");
 	protected By verify = By.xpath("//button[text()='click here to verify ']");
+	protected By cnfm = By.xpath("//button[@type='submit']");
 	
 	
 	
-	protected void SignupInformation() {
+	protected void SignupInformation() throws Exception {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(verify)).click();
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verify)).click();		
+		Sotp();
+		Thread.sleep(100);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(name)).sendKeys(Name);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(dob)).sendKeys("10101999");
 		Select drpCountry = new Select(driver.findElement(gender));
