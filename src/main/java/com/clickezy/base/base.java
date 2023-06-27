@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,7 +26,7 @@ public class base extends Data {
 	protected By newMail = By.xpath("//input[@name='email_number']");
 	protected By checkbox = By.xpath("//input[@type='checkbox']");
 	protected By resend = By.xpath("//button[text()='resend']");
-	protected By sup = By.xpath("//button[text()='Signup']");
+	protected By sup = By.xpath("//button[@type='submit']");
 	protected By Sotp = By.xpath("//input[@name='otp']");
 	protected By Osubmit = By.xpath("//button[text()='Confirm']");
 	protected By mobile = By.xpath("//input[@name='mobile']");
@@ -39,6 +41,8 @@ public class base extends Data {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(dob)).sendKeys("10101999");
 		Select drpCountry = new Select(driver.findElement(gender));
 		drpCountry.selectByVisibleText("Male");
+		Actions at = new Actions(driver);
+	    at.sendKeys(Keys.PAGE_DOWN).build().perform();
 	}
 	
 	protected void Sotp() throws Exception {		
