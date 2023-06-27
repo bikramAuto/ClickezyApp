@@ -26,6 +26,10 @@ public class base extends Data {
 	protected By sup = By.xpath("//button[text()='Signup']");
 	protected By Sotp = By.xpath("//input[@name='otp']");
 	protected By Osubmit = By.xpath("//button[text()='Confirm']");
+	protected By mobile = By.xpath("//input[@name='mobile']");
+	protected By name = By.xpath("//input[@name='name']");
+	protected By dob = By.xpath("//input[@name='dob']");
+	
 	
 	protected void SignupInformation() {
 		
