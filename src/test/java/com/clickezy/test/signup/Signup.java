@@ -20,6 +20,7 @@ public class Signup extends base {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(sup)).click();
 		Sotp();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+		SignupInformation();
 //		driver.findElement(checkbox).click();
 //		MailSAC();
 		

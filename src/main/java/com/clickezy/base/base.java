@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.clickezy.base.data.Data;
@@ -29,10 +30,15 @@ public class base extends Data {
 	protected By mobile = By.xpath("//input[@name='mobile']");
 	protected By name = By.xpath("//input[@name='name']");
 	protected By dob = By.xpath("//input[@name='dob']");
+	protected By gender = By.xpath("//select[@name='gender']");
 	
 	
 	protected void SignupInformation() {
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(name)).sendKeys(Name);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(dob)).sendKeys("10101999");
+		Select drpCountry = new Select(driver.findElement(gender));
+		drpCountry.selectByVisibleText("Male");
 	}
 	
 	protected void Sotp() throws Exception {		
