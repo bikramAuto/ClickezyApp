@@ -2,7 +2,7 @@ package com.clickezy.base.data;
 
 public class Data {
 	
-	protected String NewID = "biki108";
+	protected String NewID = "biki112";
 	protected String NewMail = NewID+"@mailsac.com";
 	protected String psw = "Biki@123";
 	protected String Otp = "1234";

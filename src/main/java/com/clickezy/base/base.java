@@ -4,11 +4,10 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,6 +32,10 @@ public class base extends Data {
 	protected By name = By.xpath("//input[@name='name']");
 	protected By dob = By.xpath("//input[@name='dob']");
 	protected By gender = By.xpath("//select[@name='gender']");
+	protected By address = By.xpath("//input[@name='address[0].address']");
+	protected By landmark = By.xpath("//input[@name='address[0].landmark']");
+	protected By citi = By.xpath("//input[@name='address[0].city']");
+	protected By pin = By.xpath("//input[@name='address[0].zip']");
 	
 	
 	protected void SignupInformation() {
@@ -41,8 +44,11 @@ public class base extends Data {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(dob)).sendKeys("10101999");
 		Select drpCountry = new Select(driver.findElement(gender));
 		drpCountry.selectByVisibleText("Male");
-		Actions at = new Actions(driver);
-	    at.sendKeys(Keys.PAGE_DOWN).build().perform();
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,500)");
+		
+		
 	}
 	
 	protected void Sotp() throws Exception {		
