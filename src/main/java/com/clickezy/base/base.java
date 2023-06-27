@@ -36,6 +36,8 @@ public class base extends Data {
 	protected By landmark = By.xpath("//input[@name='address[0].landmark']");
 	protected By citi = By.xpath("//input[@name='address[0].city']");
 	protected By pin = By.xpath("//input[@name='address[0].zip']");
+	protected By verify = By.xpath("//button[text()='click here to verify ']");
+	
 	
 	
 	protected void SignupInformation() {
@@ -48,7 +50,10 @@ public class base extends Data {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,500)");
 		
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(address)).sendKeys(add);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(landmark)).sendKeys(lmark);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(citi)).sendKeys(City);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pin)).sendKeys(zip);
 	}
 	
 	protected void Sotp() throws Exception {		
