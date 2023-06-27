@@ -42,6 +42,8 @@ public class base extends Data {
 	
 	protected void SignupInformation() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verify)).click();
+		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(name)).sendKeys(Name);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(dob)).sendKeys("10101999");
 		Select drpCountry = new Select(driver.findElement(gender));

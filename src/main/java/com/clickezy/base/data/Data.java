@@ -7,7 +7,7 @@ public class Data {
 	protected String psw = "Biki@123";
 	protected String Otp = "1234";
 	protected String Name = "demo";
-	protected String mob = "1234567890";
+	protected String mob = "9937123456";
 	
 	protected String add = "Demo";
 	protected String lmark = "demo";
