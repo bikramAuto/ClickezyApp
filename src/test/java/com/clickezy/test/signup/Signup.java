@@ -10,7 +10,6 @@ public class Signup extends base {
 	
 	@Test
 	protected void signup() throws ElementNotInteractableException, Exception {
-		lunch();
 		SelectCity();
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createAc)).click();

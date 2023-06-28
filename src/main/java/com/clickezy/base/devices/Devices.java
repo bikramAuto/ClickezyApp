@@ -3,6 +3,7 @@ package com.clickezy.base.devices;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
 
 import com.clickezy.base.data.Data;
 
@@ -13,6 +14,7 @@ public class Devices extends Data {
 	protected WebDriver driver;
 	protected WebDriverWait wait;
 	
+	@BeforeTest
 	protected void lunch() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();

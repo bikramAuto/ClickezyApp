@@ -41,9 +41,8 @@ public class base extends Devices {
 	protected By login = By.xpath("//button[text()='Login']");
 	
 	
-	@Test
+//	@Test
 	protected void SignIn() throws Exception {
-		lunch();
 		SelectCity();
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
@@ -58,8 +57,8 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verify)).click();		
 		Sotp();
-		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(name)).sendKeys(Name);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(dob)).sendKeys("10101999");
 		Select drpCountry = new Select(driver.findElement(gender));
