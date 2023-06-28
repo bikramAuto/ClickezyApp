@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-28T17:50:45 IST" name="Default suite" finished-at="2023-06-28T17:51:37 IST" duration-ms="51987">
+  <suite started-at="2023-06-28T18:10:04 IST" name="Default suite" finished-at="2023-06-28T18:10:16 IST" duration-ms="12437">
     <groups>
     </groups>
-    <test started-at="2023-06-28T17:50:45 IST" name="Default test" finished-at="2023-06-28T17:51:37 IST" duration-ms="51987">
-      <class name="com.clickezy.test.signup.Signup">
-        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.test.signup.Signup@61df66b6]" started-at="2023-06-28T17:50:45 IST" name="lunch" finished-at="2023-06-28T17:51:29 IST" duration-ms="44624" status="PASS">
+    <test started-at="2023-06-28T18:10:04 IST" name="Default test" finished-at="2023-06-28T18:10:16 IST" duration-ms="12437">
+      <class name="com.clickezy.base.base">
+        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.base.base@708f5957]" started-at="2023-06-28T18:10:04 IST" name="lunch" finished-at="2023-06-28T18:10:12 IST" duration-ms="8121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunch -->
-        <test-method signature="signup()[pri:0, instance:com.clickezy.test.signup.Signup@61df66b6]" started-at="2023-06-28T17:51:29 IST" name="signup" finished-at="2023-06-28T17:51:37 IST" duration-ms="7317" status="PASS">
+        <test-method signature="SignIn()[pri:0, instance:com.clickezy.base.base@708f5957]" started-at="2023-06-28T18:10:12 IST" name="SignIn" finished-at="2023-06-28T18:10:16 IST" duration-ms="4257" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signup -->
-      </class> <!-- com.clickezy.test.signup.Signup -->
+        </test-method> <!-- SignIn -->
+      </class> <!-- com.clickezy.base.base -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
