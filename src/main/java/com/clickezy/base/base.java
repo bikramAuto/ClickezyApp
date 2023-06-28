@@ -42,7 +42,7 @@ public class base extends Devices {
 	
 	
 	@Test
-	protected void SignIn() throws Exception {
+	protected void MailSignIn() throws Exception {
 		SelectCity();
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
@@ -150,6 +150,7 @@ public class base extends Devices {
 	
 	protected void SelectCity() throws Exception {
 		wait= new WebDriverWait(driver, (50));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(city));
 		List <WebElement> City = driver.findElements(city);
 //		List <WebElement> City = wait.until(ExpectedConditions.visibilityOfElementLocated(city));
 		System.out.println("Citys: "+City.size());
