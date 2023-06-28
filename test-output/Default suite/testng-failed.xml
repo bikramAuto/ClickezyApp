@@ -6,6 +6,7 @@
       <class name="com.clickezy.test.signup.Signup">
         <methods>
           <include name="signup"/>
+          <include name="lunch"/>
         </methods>
       </class> <!-- com.clickezy.test.signup.Signup -->
     </classes>
