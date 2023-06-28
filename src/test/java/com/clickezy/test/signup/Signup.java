@@ -1,5 +1,6 @@
 package com.clickezy.test.signup;
 
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -8,7 +9,7 @@ import com.clickezy.base.base;
 public class Signup extends base {
 	
 	@Test
-	protected void signup() throws Exception {
+	protected void signup() throws ElementNotInteractableException, Exception {
 		lunch();
 		SelectCity();
 		driver.findElement(credential).click();

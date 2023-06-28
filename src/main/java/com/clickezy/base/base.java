@@ -51,6 +51,7 @@ public class base extends Data {
 				).sendKeys(Lmail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
 		Sotp();
+		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 	}
 	

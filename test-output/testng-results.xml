@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-28T17:08:34 IST" name="Default suite" finished-at="2023-06-28T17:08:46 IST" duration-ms="11569">
+  <suite started-at="2023-06-28T17:28:32 IST" name="Default suite" finished-at="2023-06-28T17:28:41 IST" duration-ms="9415">
     <groups>
     </groups>
-    <test started-at="2023-06-28T17:08:34 IST" name="Default test" finished-at="2023-06-28T17:08:46 IST" duration-ms="11569">
+    <test started-at="2023-06-28T17:28:32 IST" name="Default test" finished-at="2023-06-28T17:28:41 IST" duration-ms="9415">
       <class name="com.clickezy.base.base">
-        <test-method signature="SignIn()[pri:0, instance:com.clickezy.base.base@6e4784bc]" started-at="2023-06-28T17:08:35 IST" name="SignIn" finished-at="2023-06-28T17:08:46 IST" duration-ms="11498" status="PASS">
+        <test-method signature="SignIn()[pri:0, instance:com.clickezy.base.base@6e4784bc]" started-at="2023-06-28T17:28:32 IST" name="SignIn" finished-at="2023-06-28T17:28:41 IST" duration-ms="9336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignIn -->
