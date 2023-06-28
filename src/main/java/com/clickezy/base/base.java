@@ -41,7 +41,7 @@ public class base extends Devices {
 	protected By login = By.xpath("//button[text()='Login']");
 	
 	
-//	@Test
+	@Test
 	protected void SignIn() throws Exception {
 		SelectCity();
 		driver.findElement(credential).click();
