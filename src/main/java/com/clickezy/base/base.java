@@ -13,13 +13,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import com.clickezy.base.data.Data;
+import com.clickezy.base.devices.Devices;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class base extends Data {
-	protected WebDriver driver;
-	protected WebDriverWait wait;
+public class base extends Devices {
+	
 	protected By city = By.xpath("//p[@class='text-lg text-gray-900 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
 	protected By createAc = By.xpath("//a[@class='flex-grow-0 flex-shrink-0 text-base font-medium text-center text-white']");
@@ -147,15 +146,7 @@ public class base extends Data {
 		}
 	}
 	
-	protected void lunch() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
-		driver= new ChromeDriver();
-		driver.manage().window().maximize();
-		wait= new WebDriverWait(driver, (50));
-		driver.get("https://clickezy-dev.netlify.app/");
-		Thread.sleep(1000);
-		
-	}
+	
 	
 	
 	protected void SelectCity() throws Exception {
