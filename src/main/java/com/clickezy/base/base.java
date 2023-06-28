@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import com.clickezy.base.data.Data;
 
@@ -38,8 +39,20 @@ public class base extends Data {
 	protected By pin = By.xpath("//input[@name='address[0].zip']");
 	protected By verify = By.xpath("//button[text()='click here to verify ']");
 	protected By cnfm = By.xpath("//button[@type='submit']");
+	protected By login = By.xpath("//button[text()='Login']");
 	
 	
+	@Test
+	protected void SignIn() throws Exception {
+		lunch();
+		SelectCity();
+		driver.findElement(credential).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
+				).sendKeys(Lmail);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
+		Sotp();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+	}
 	
 	protected void SignupInformation() throws Exception {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
@@ -161,9 +174,5 @@ public class base extends Data {
 	
 	
 	
-	protected void SignIn() {
-		
-		
-	}
 
 }

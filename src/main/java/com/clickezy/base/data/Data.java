@@ -2,6 +2,7 @@ package com.clickezy.base.data;
 
 public class Data {
 	
+	//SignUp
 	protected String NewID = "biki119";
 	protected String NewMail = NewID+"@mailsac.com";
 	protected String psw = "Biki@123";
@@ -14,5 +15,7 @@ public class Data {
 	protected String City = "demo";
 	protected String zip = "765432";
 	
+	//SighIn
+	protected String Lmail = "biki119@mailsac.com";
 	
 }
