@@ -6,7 +6,7 @@
       <class name="com.clickezy.base.base">
         <methods>
           <include name="lunch"/>
-          <include name="SignIn"/>
+          <include name="MailSignIn"/>
         </methods>
       </class> <!-- com.clickezy.base.base -->
     </classes>

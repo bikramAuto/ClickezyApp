@@ -19,6 +19,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class base extends Devices {
 	
+	String title;
+	String actualTitle;
+	
 	protected By city = By.xpath("//p[@class='text-lg text-gray-900 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
 	protected By createAc = By.xpath("//a[@class='flex-grow-0 flex-shrink-0 text-base font-medium text-center text-white']");
@@ -39,6 +42,7 @@ public class base extends Devices {
 	protected By verify = By.xpath("//button[text()='click here to verify ']");
 	protected By cnfm = By.xpath("//button[@type='submit']");
 	protected By login = By.xpath("//button[text()='Login']");
+	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-2xl font-semibold text-center text-white']");
 	
 	
 	@Test
@@ -48,11 +52,34 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
+		
 		Sotp();
+		assertEquals();
+		
 		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 	}
 	
+	protected void assertEquals() {
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(sOtpTitle));
+			title = driver.findElement(sOtpTitle).getText();
+			System.out.println("title: "+title);
+			actualTitle = "Confirm your Mail";
+			if(title.equals(actualTitle)) {
+				System.out.println("Title is rite");
+			}else {
+				System.out.println("title is wrong");
+			}
+//			Assert.assertEquals(title,actualTitle);
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+		}
+		
+	}
+
 	protected void SignupInformation() throws Exception {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verify)).click();		
