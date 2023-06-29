@@ -177,7 +177,6 @@ public class base extends Devices {
 		wait= new WebDriverWait(driver, (50));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(city));
 		List <WebElement> City = driver.findElements(city);
-//		List <WebElement> City = wait.until(ExpectedConditions.visibilityOfElementLocated(city));
 		System.out.println("Citys: "+City.size());
 		for(int i=0;i<City.size();i++) {
 			System.out.println(City.get(i).getText());
