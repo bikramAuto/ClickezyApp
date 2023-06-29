@@ -1,5 +1,8 @@
 package com.clickezy.test.bookNow;
 
-public class BookNow {
+import com.clickezy.base.base;
 
+public class BookNow extends base {
+	
+	
 }
