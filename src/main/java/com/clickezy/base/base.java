@@ -46,7 +46,34 @@ public class base extends Devices {
 	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-2xl font-semibold text-center text-white']");
 	
 	
-	@Test
+//	@Test
+	protected void MobSignIn() throws Exception {
+		SelectCity();
+		driver.findElement(credential).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
+				).sendKeys(Lmob);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
+		Sotp();
+		assertEqualsMob();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+	}
+	
+	protected void assertEqualsMob() {
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(sOtpTitle));
+			title = driver.findElement(sOtpTitle).getText();
+			System.out.println("title: "+title);
+			actualTitle = "Confirm your phone";
+			Assert.assertEquals(title,actualTitle);
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+		}
+		
+	}
+	
+//	@Test
 	protected void MailSignIn() throws Exception {
 		SelectCity();
 		driver.findElement(credential).click();
@@ -55,7 +82,7 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
 		Sotp();
 		assertEquals();
-		Thread.sleep(100);
+//		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 	}
 	
@@ -65,11 +92,6 @@ public class base extends Devices {
 			title = driver.findElement(sOtpTitle).getText();
 			System.out.println("title: "+title);
 			actualTitle = "Confirm your Mail";
-//			if(title.equals(actualTitle)) {
-//				System.out.println("Title is rite");
-//			}else {
-//				System.out.println("title is wrong");
-//			}
 			Assert.assertEquals(title,actualTitle);
 			
 		}catch(Exception e) {
