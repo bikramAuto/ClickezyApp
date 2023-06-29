@@ -1,8 +1,17 @@
 package com.clickezy.test.bookNow;
 
-import com.clickezy.base.base;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Test;
 
-public class BookNow extends base {
+import com.clickezy.test.signup.Signup;
+
+public class BookNow extends Signup {
 	
-	
+	@Test
+	protected void bookNow() throws Exception {
+		signup();
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow)).click();
+		
+	}
 }
