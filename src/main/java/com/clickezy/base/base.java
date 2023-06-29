@@ -70,7 +70,6 @@ public class base extends Devices {
 			System.out.println(e.getMessage());
 			System.out.println(e.getCause());
 		}
-		
 	}
 	
 //	@Test
@@ -92,13 +91,11 @@ public class base extends Devices {
 			title = driver.findElement(sOtpTitle).getText();
 			System.out.println("title: "+title);
 			actualTitle = "Confirm your Mail";
-			Assert.assertEquals(title,actualTitle);
-			
+			Assert.assertEquals(title,actualTitle);			
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 			System.out.println(e.getCause());
-		}
-		
+		}		
 	}
 
 	protected void SignupInformation() throws Exception {
@@ -192,8 +189,6 @@ public class base extends Devices {
 			}
 		}
 	}
-	
-	
 	
 	
 	protected void SelectCity() throws Exception {
