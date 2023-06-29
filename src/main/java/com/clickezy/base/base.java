@@ -188,8 +188,5 @@ public class base extends Devices {
 			}	
 		}		
 	}
-	
-	
-	
 
 }
