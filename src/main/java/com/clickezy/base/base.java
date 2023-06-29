@@ -52,10 +52,8 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
-		
 		Sotp();
 		assertEquals();
-		
 		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 	}
