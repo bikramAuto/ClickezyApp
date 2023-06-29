@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-29T18:00:07 IST" name="Default suite" finished-at="2023-06-29T18:00:23 IST" duration-ms="15780">
+  <suite started-at="2023-06-29T20:44:21 IST" name="Default suite" finished-at="2023-06-29T20:44:39 IST" duration-ms="17823">
     <groups>
     </groups>
-    <test started-at="2023-06-29T18:00:07 IST" name="Default test" finished-at="2023-06-29T18:00:23 IST" duration-ms="15780">
+    <test started-at="2023-06-29T20:44:21 IST" name="Default test" finished-at="2023-06-29T20:44:39 IST" duration-ms="17823">
       <class name="com.clickezy.test.bookNow.BookNow">
-        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.test.bookNow.BookNow@50eac852]" started-at="2023-06-29T18:00:07 IST" name="lunch" finished-at="2023-06-29T18:00:14 IST" duration-ms="6832" status="PASS">
+        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.test.bookNow.BookNow@7722c3c3]" started-at="2023-06-29T20:44:21 IST" name="lunch" finished-at="2023-06-29T20:44:31 IST" duration-ms="10463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunch -->
-        <test-method signature="bookNow()[pri:0, instance:com.clickezy.test.bookNow.BookNow@50eac852]" started-at="2023-06-29T18:00:14 IST" name="bookNow" finished-at="2023-06-29T18:00:23 IST" duration-ms="8847" status="PASS">
+        <test-method signature="bookNow()[pri:0, instance:com.clickezy.test.bookNow.BookNow@7722c3c3]" started-at="2023-06-29T20:44:31 IST" name="bookNow" finished-at="2023-06-29T20:44:39 IST" duration-ms="7319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bookNow -->

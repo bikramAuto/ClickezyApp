@@ -16,7 +16,7 @@ public class Data {
 	protected String zip = "765432";
 	
 	//SighIn
-	protected String Lmail = "biki122@mailsac.com";
-	protected String Lmob = "9937123471";
+	protected String Lmail = "biki134@mailsac.com";
+	protected String Lmob = "9937123475";
 	
 }

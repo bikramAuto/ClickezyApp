@@ -8,7 +8,7 @@ import com.clickezy.base.base;
 
 public class Signup extends base {
 	
-//	@Test
+	@Test
 	protected void signup() throws ElementNotInteractableException, Exception {
 		SelectCity();
 		driver.findElement(credential).click();
@@ -22,7 +22,7 @@ public class Signup extends base {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		SignupInformation();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cnfm)).click();
-//		driver.quit();
+		driver.quit();
 //		driver.findElement(checkbox).click();
 //		MailSAC();
 		

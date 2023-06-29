@@ -3,13 +3,13 @@ package com.clickezy.test.bookNow;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
-import com.clickezy.test.signup.Signup;
+import com.clickezy.base.base;
 
-public class BookNow extends Signup {
+public class BookNow extends base {
 	
 	@Test
 	protected void bookNow() throws Exception {
-		signup();
+		MobSignIn();
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow)).click();
 		
