@@ -45,6 +45,12 @@ public class base extends Devices {
 	protected By login = By.xpath("//button[text()='Login']");
 	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-2xl font-semibold text-center text-white']");
 	protected By BookNow = By.xpath("(//a[text()='Book Now'])[1]");
+	protected By BookFor = By.xpath("//button[@id='headlessui-listbox-button-:r9:']");
+	
+	
+	protected void BookForm() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(BookFor)).click();
+	}
 	
 	
 //	@Test
