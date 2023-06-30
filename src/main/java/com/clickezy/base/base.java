@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,8 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.clickezy.base.devices.Devices;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -46,10 +45,27 @@ public class base extends Devices {
 	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-2xl font-semibold text-center text-white']");
 	protected By BookNow = By.xpath("(//a[text()='Book Now'])[1]");
 	protected By BookFor = By.xpath("//button[@id='headlessui-listbox-button-:r9:']");
+	protected By BookForCategory = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-xs font-medium text-center text-white']");
+	protected By Done = By.xpath("//button[text()='Done']");
 	
 	
-	protected void BookForm() {
+	protected void BookForm() throws ElementNotInteractableException, Exception {
+		wait= new WebDriverWait(driver, (50));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BookFor)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
+		List <WebElement> category = driver.findElements(BookForCategory);
+		System.out.println("NumberCategorys: "+category.size());
+		for(int i=0;i<category.size();i++) {
+			System.out.println(category.get(i).getText());
+			String cty = category.get(i).getText();
+			if(cty.equals("Travel")) {
+				driver.findElement(BookForCategory).click();
+				break;
+			}	
+		}
+//		Thread.sleep(100);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(Done));
+		
 	}
 	
 	
