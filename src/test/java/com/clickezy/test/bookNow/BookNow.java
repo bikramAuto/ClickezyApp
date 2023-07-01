@@ -12,6 +12,6 @@ public class BookNow extends base {
 		MobSignIn();
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow)).click();
-		BookForm();
+		BookForm(wait);
 	}
 }
