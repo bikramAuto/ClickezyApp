@@ -44,44 +44,31 @@ public class base extends Devices {
 	protected By login = By.xpath("//button[text()='Login']");
 	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-2xl font-semibold text-center text-white']");
 	protected By BookNow = By.xpath("(//a[text()='Book Now'])[1]");
-	protected By BookFor = By.xpath("//button[@id='headlessui-listbox-button-:re:']");
-	protected By Bookfor = By.xpath("//button[@id='headlessui-listbox-button-:r9:']");
+	protected By Bookstudio = By.xpath("(//button[@class='formInput w-full flex justify-between false'])[3]");
+	protected By Bookfor = By.xpath("(//button[@class='formInput w-full flex justify-between false'])[1]");
 	protected By BookForCategory = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-xs font-medium text-center text-white']");
 	protected By Done = By.xpath("//button[text()='Done']");
-	protected By frame = By.xpath("//ul[@id='headlessui-listbox-options-:rg:']");
+	protected By framebook = By.xpath("//li[@class='cursor-default flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-3 text-white']");
+	protected By bookingSearch = By.xpath("//input[@class='formInput w-full']");
 	
 	
 	protected void BookForm(WebDriverWait Wait) throws ElementNotInteractableException, Exception {
 		wait= new WebDriverWait(driver, (30));
-		try {
-			wait.until(ExpectedConditions.visibilityOfElementLocated(BookFor)).click();
-		}catch(Exception e) {
-			wait.until(ExpectedConditions.visibilityOfElementLocated(BookFor)).click();
-		}
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookfor)).click();		
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
 		List <WebElement> category = driver.findElements(BookForCategory);
 		System.out.println("NumberCategorys: "+category.size());
-		for(int i=0;i<category.size();i++) {
-			System.out.println(category.get(i).getText());
-			String cty = category.get(i).getText();
-			if(cty.equals("Travel")) {
-				System.out.println("i: "+i);
-				if(i>6) {
-					driver.findElement(BookForCategory).click();
-					Thread.sleep(1000);
-//					driver.switchTo().activeElement().click();
-//					driver.switchTo().frame((WebElement) By.xpath("//ul[@id='headlessui-listbox-options-:r7:']"));
-					JavascriptExecutor jse = (JavascriptExecutor)driver;
-					jse.executeScript("window.scrollBy(0,500)");
-				}
-				
-				break;
-			}	
-		}
-//		Thread.sleep(100);
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(Done));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("pet");
+		Thread.sleep(100);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(framebook)).click();	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Done)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookstudio)).click();
 		
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(Booklocation)).click();
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
+//		List <WebElement> Category = driver.findElements(BookForCategory);
+//		System.out.println("NumberCategorys: "+Category.size());
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("pet");
 	}
 	
 	
