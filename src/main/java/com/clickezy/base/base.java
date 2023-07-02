@@ -50,12 +50,12 @@ public class base extends Devices {
 	protected By Done = By.xpath("//button[text()='Done']");
 	protected By framebook = By.xpath("//li[@class='cursor-default flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-3 text-white']");
 	protected By bookingSearch = By.xpath("//input[@class='formInput w-full']");
+	protected By studio = By.xpath("//li[@class='relative cursor-default select-none py-4 pl-5 pr-3 flex justify-start items-center flex-grow-0 flex-shrink-0 self-stretch border-b border-[#ffffff10] last:border-0 text-white']");
 	
 	
 	protected void BookForm(WebDriverWait Wait) throws ElementNotInteractableException, Exception {
 		wait= new WebDriverWait(driver, (30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookfor)).click();		
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
 		List <WebElement> category = driver.findElements(BookForCategory);
 		System.out.println("NumberCategorys: "+category.size());
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("pet");
@@ -63,6 +63,9 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(framebook)).click();	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Done)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookstudio)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("The fotowalla");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Done)).click();
 		
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(Booklocation)).click();
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
