@@ -9,7 +9,7 @@ public class BookNow extends base {
 	
 	@Test
 	protected void bookNow() throws Exception {
-		MobSignIn();
+		MobSignIn(wait);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow)).click();
 		BookForm(wait);

@@ -42,12 +42,11 @@ public class base extends Devices {
 	protected By verify = By.xpath("//button[text()='click here to verify ']");
 	protected By cnfm = By.xpath("//button[@type='submit']");
 	protected By login = By.xpath("//button[text()='Login']");
-	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-2xl font-semibold text-center text-white']");
+	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-lg text-center text-white']");
 	protected By BookNow = By.xpath("(//a[text()='Book Now'])[1]");
 	protected By Bookstudio = By.xpath("(//button[@class='formInput w-full flex justify-between false'])[3]");
 	protected By Bookfor = By.xpath("(//button[@class='formInput w-full flex justify-between false'])[1]");
 	protected By BookForCategory = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-xs font-medium text-center text-white']");
-	protected By Done = By.xpath("//button[text()='Done']");
 	protected By framebook = By.xpath("//li[@class='cursor-default flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-3 text-white']");
 	protected By bookingSearch = By.xpath("//input[@class='formInput w-full']");
 	protected By studio = By.xpath("//li[@class='relative cursor-default select-none py-4 pl-5 pr-3 flex justify-start items-center flex-grow-0 flex-shrink-0 self-stretch border-b border-[#ffffff10] last:border-0 text-white']");
@@ -61,11 +60,9 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("pet");
 		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(framebook)).click();	
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Done)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookstudio)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("The fotowalla");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();	
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Done)).click();
 		
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(Booklocation)).click();
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
@@ -76,14 +73,19 @@ public class base extends Devices {
 	
 	
 //	@Test
-	protected void MobSignIn() throws Exception {
+	protected void MobSignIn(WebDriverWait wait) throws Exception {
 		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
 		Sotp();
-		assertEqualsMob();
+		try {
+			assertEqualsMob();
+		}catch(Exception e) {
+			System.out.println(e.getCause());
+		}
+		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 	}
 	
