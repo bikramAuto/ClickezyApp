@@ -22,7 +22,7 @@ public class base extends Devices {
 	String title;
 	String actualTitle;
 	
-	protected By city = By.xpath("//p[@class='text-lg text-gray-900 truncate dark:text-white']");
+	protected By city = By.xpath("//p[@class='text-lg md:text-base text-gray-800 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
 	protected By createAc = By.xpath("//a[@class='flex-grow-0 flex-shrink-0 text-base font-medium text-center text-white']");
 	protected By newMail = By.xpath("//input[@name='email_number']");
@@ -77,7 +77,7 @@ public class base extends Devices {
 	
 //	@Test
 	protected void MobSignIn() throws Exception {
-		SelectCity();
+		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmob);
@@ -103,7 +103,7 @@ public class base extends Devices {
 	
 //	@Test
 	protected void MailSignIn() throws Exception {
-		SelectCity();
+		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmail);
@@ -220,7 +220,7 @@ public class base extends Devices {
 	}
 	
 	
-	protected void SelectCity() throws Exception {
+	protected void SelectCity(WebDriverWait wait) throws Exception {
 		wait= new WebDriverWait(driver, (50));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(city));
 		List <WebElement> City = driver.findElements(city);
