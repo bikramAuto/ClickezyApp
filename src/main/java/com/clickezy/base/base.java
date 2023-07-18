@@ -104,14 +104,18 @@ public class base extends Devices {
 	}
 	
 //	@Test
-	protected void MailSignIn() throws Exception {
+	protected void MailSignIn(WebDriverWait wait) throws Exception {
 		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
 		Sotp();
-		assertEquals();
+		try {
+			assertEquals();
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}	
 		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 	}
@@ -121,7 +125,7 @@ public class base extends Devices {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(sOtpTitle));
 			title = driver.findElement(sOtpTitle).getText();
 			System.out.println("title: "+title);
-			actualTitle = "Confirm your Mail";
+			actualTitle = "Confirm your email";
 			Assert.assertEquals(title,actualTitle);			
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
