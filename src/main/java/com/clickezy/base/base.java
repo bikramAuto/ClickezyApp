@@ -50,7 +50,9 @@ public class base extends Devices {
 	protected By framebook = By.xpath("//li[@class='cursor-default flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-3 text-white']");
 	protected By bookingSearch = By.xpath("//input[@class='formInput w-full']");
 	protected By studio = By.xpath("//li[@class='relative cursor-default select-none py-4 pl-5 pr-3 flex justify-start items-center flex-grow-0 flex-shrink-0 self-stretch border-b border-[#ffffff10] last:border-0 text-white']");
-	
+	protected By bookingTime = By.xpath("//div[@class=' css-svn9ad-control']");
+	protected By bookingDay = By.xpath("//div[text()='Day']");
+	protected By bookingHour = By.xpath("//div[text()='Hourly']");
 	
 	protected void BookForm(WebDriverWait Wait) throws ElementNotInteractableException, Exception {
 		wait= new WebDriverWait(driver, (30));
@@ -62,7 +64,13 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(framebook)).click();	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookstudio)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("subhamStudio");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,200)");
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingTime)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingHour)).click();
 		
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(Booklocation)).click();
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
