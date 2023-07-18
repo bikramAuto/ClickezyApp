@@ -21,6 +21,8 @@ public class base extends Devices {
 	
 	String title;
 	String actualTitle;
+	String h = "07";
+	String m = "09";
 	
 	protected By city = By.xpath("//p[@class='text-lg md:text-base text-gray-800 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
@@ -53,6 +55,16 @@ public class base extends Devices {
 	protected By bookingTime = By.xpath("//div[@class=' css-svn9ad-control']");
 	protected By bookingDay = By.xpath("//div[text()='Day']");
 	protected By bookingHour = By.xpath("//div[text()='Hourly']");
+	protected By selectDate = By.xpath("//input[@placeholder='Select date']");
+	protected By date = By.xpath("//div[text()='31']");
+	protected By selectTime = By.xpath("//input[@placeholder='Select time']");
+	protected By Hrs = By.xpath("(//div[text()='"+ h +"'])[1]");
+	protected By min = By.xpath("(//div[text()='"+ m +"'])[2]");
+	protected By tOk = By.xpath("//span[text()='OK']");
+	protected By minFream = By.xpath("(//ul[@class='ant-picker-time-panel-column'])[2]");
+	protected By next = By.xpath("//button[text()=\"Next\"]");
+	
+	
 	
 	protected void BookForm(WebDriverWait Wait) throws ElementNotInteractableException, Exception {
 		wait= new WebDriverWait(driver, (30));
@@ -64,13 +76,24 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(framebook)).click();	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookstudio)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("subhamStudio");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,200)");
-		
+		jse.executeScript("window.scrollBy(0,200)");		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingTime)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingHour)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingHour)).click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectDate)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(date)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectTime)).click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Hrs)).click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(minFream)).click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(min)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(tOk)).click();
+		JavascriptExecutor je = (JavascriptExecutor)driver;
+		je.executeScript("window.scrollBy(0,200)");
+		driver.findElement(By.xpath("//textarea")).sendKeys("Testing");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
+		
+//		System.out.println("hrs: "+hrs);
 		
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(Booklocation)).click();
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(BookForCategory));
