@@ -57,11 +57,11 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookfor)).click();		
 		List <WebElement> category = driver.findElements(BookForCategory);
 		System.out.println("NumberCategorys: "+category.size());
-		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("pet");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("Birthday");
 		Thread.sleep(100);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(framebook)).click();	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Bookstudio)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("The fotowalla");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingSearch)).sendKeys("subhamStudio");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(studio)).click();	
 		
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(Booklocation)).click();
