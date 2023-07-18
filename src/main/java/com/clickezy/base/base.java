@@ -62,7 +62,10 @@ public class base extends Devices {
 	protected By min = By.xpath("(//div[text()='"+ m +"'])[2]");
 	protected By tOk = By.xpath("//span[text()='OK']");
 	protected By minFream = By.xpath("(//ul[@class='ant-picker-time-panel-column'])[2]");
-	protected By next = By.xpath("//button[text()=\"Next\"]");
+	protected By next = By.xpath("//button[text()='Next']");
+	protected By location = By.xpath("//div[@class=' css-yrenfx-control']");
+	protected By Banivihar = By.xpath("//div[@id='react-select-:r15:-option-0']");
+	protected By timeIncrease = By.xpath("//button[text()='+']");
 	
 	
 	
@@ -80,7 +83,10 @@ public class base extends Devices {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,200)");		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingTime)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingHour)).click();		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(bookingHour)).click();
+		for(int i=0;i<2;i++) {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(timeIncrease)).click();
+		}		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(selectDate)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(date)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(selectTime)).click();		
@@ -92,6 +98,9 @@ public class base extends Devices {
 		je.executeScript("window.scrollBy(0,200)");
 		driver.findElement(By.xpath("//textarea")).sendKeys("Testing");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(location)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Banivihar)).click();
+		
 		
 //		System.out.println("hrs: "+hrs);
 		
