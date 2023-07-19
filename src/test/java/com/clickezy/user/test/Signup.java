@@ -1,4 +1,4 @@
-package com.clickezy.test.signup;
+package com.clickezy.user.test;
 
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.support.ui.ExpectedConditions;

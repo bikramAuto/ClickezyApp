@@ -2,7 +2,7 @@ package com.clickezy.test;
 
 import org.testng.TestNG;
 
-import com.clickezy.test.signup.Signup;
+import com.clickezy.user.test.Signup;
 
 public class TestRunner {
 	

@@ -1,4 +1,4 @@
-package com.clickezy.test.bookNow;
+package com.clickezy.user.test;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
