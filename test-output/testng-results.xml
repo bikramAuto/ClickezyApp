@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-19T16:18:04 IST" name="Command line suite" finished-at="2023-07-19T16:18:19 IST" duration-ms="15562">
+  <suite started-at="2023-07-19T16:33:46 IST" name="Command line suite" finished-at="2023-07-19T16:34:01 IST" duration-ms="14722">
     <groups>
     </groups>
-    <test started-at="2023-07-19T16:18:04 IST" name="Command line test" finished-at="2023-07-19T16:18:19 IST" duration-ms="15562">
+    <test started-at="2023-07-19T16:33:46 IST" name="Command line test" finished-at="2023-07-19T16:34:01 IST" duration-ms="14722">
       <class name="com.clickezy.test.signup.Signup">
-        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.test.signup.Signup@6ee52dcd]" started-at="2023-07-19T16:18:04 IST" name="lunch" finished-at="2023-07-19T16:18:09 IST" duration-ms="5626" status="PASS">
+        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.test.signup.Signup@6ee52dcd]" started-at="2023-07-19T16:33:46 IST" name="lunch" finished-at="2023-07-19T16:33:51 IST" duration-ms="5184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunch -->
-        <test-method signature="signup()[pri:0, instance:com.clickezy.test.signup.Signup@6ee52dcd]" started-at="2023-07-19T16:18:09 IST" name="signup" finished-at="2023-07-19T16:18:19 IST" duration-ms="9862" status="PASS">
+        <test-method signature="signup()[pri:0, instance:com.clickezy.test.signup.Signup@6ee52dcd]" started-at="2023-07-19T16:33:51 IST" name="signup" finished-at="2023-07-19T16:34:01 IST" duration-ms="9406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signup -->
