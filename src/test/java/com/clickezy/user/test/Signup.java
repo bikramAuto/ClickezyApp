@@ -19,7 +19,7 @@ public class Signup extends base {
 				).sendKeys(NewMail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(checkbox)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(sup)).click();
-		Sotp();
+		Sotp(wait);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		SignupInformation();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cnfm)).click();

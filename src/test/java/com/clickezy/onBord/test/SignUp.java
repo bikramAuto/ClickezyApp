@@ -11,7 +11,13 @@ public class SignUp extends base {
 	protected void Signup() throws ElementNotInteractableException, Exception {
 		driver.get("https://frontend.staging.clickezy.com/onboard/");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createAc)).click();
-		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Newmail)
+				).sendKeys(NewMail);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(checkbox)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Continue)).click();
+		sotp(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+		OnbordSignupInformation(wait);
 		
 	}
 

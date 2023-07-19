@@ -68,9 +68,36 @@ public class base extends Devices {
 	protected By Banivihar = By.xpath("//div[@id='react-select-:r15:-option-0']");
 	protected By timeIncrease = By.xpath("//button[text()='+']");
 	
-	protected By CreatAc = By.xpath("//a[text()='Create account']");
+	protected By Newmail = By.xpath("//input[@name='email']");
+	protected By Continue = By.xpath("//button[text()='Continue']");
+	protected By phone =By.xpath("//input[@name='phone']");
+	protected By Verify = By.xpath("//button[text()='Click here to verify']");
+	protected By studioname = By.xpath("//input[@name='studioName']");
+	protected By pName = By.xpath("//input[@name='name']");
 	
 	
+	protected void OnbordSignupInformation(WebDriverWait wait) throws Exception {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(phone)).sendKeys(mob);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Verify)).click();		
+		sotp(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(studioname)).sendKeys(StudioName);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(pName)).sendKeys(NewID);
+		
+		
+	}
+	
+	protected void sotp(WebDriverWait wait) throws Exception {		
+		char[] otp = Otp.toCharArray();
+		System.out.println("inside sOtp");
+		for (int i = 0; i < otp.length; i++) {
+			int a = i+1;
+			int x = 0;
+            wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("(//input[@name='otp'])["+ a +"]")))
+                    .sendKeys(otp[x] + "");           
+        	}		
+	}
 	
 	protected void BookForm(WebDriverWait Wait) throws ElementNotInteractableException, Exception {
 		wait= new WebDriverWait(driver, (30));
@@ -120,7 +147,7 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
-		Sotp();
+		Sotp(wait);
 		try {
 			assertEqualsMob();
 		}catch(Exception e) {
@@ -151,7 +178,7 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
 				).sendKeys(Lmail);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
-		Sotp();
+		Sotp(wait);
 		try {
 			assertEquals();
 		}catch(Exception e) {
@@ -177,7 +204,7 @@ public class base extends Devices {
 	protected void SignupInformation() throws Exception {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mobile)).sendKeys(mob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verify)).click();		
-		Sotp();
+		Sotp(wait);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(name)).sendKeys(Name);
@@ -194,7 +221,7 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(pin)).sendKeys(zip);
 	}
 	
-	protected void Sotp() throws Exception {		
+	protected void Sotp(WebDriverWait wait) throws Exception {		
 		char[] otp = Otp.toCharArray();
 		System.out.println("inside sOtp");
 		for (int i = 0; i < otp.length; i++) {
