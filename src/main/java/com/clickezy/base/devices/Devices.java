@@ -20,8 +20,8 @@ public class Devices extends Data {
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
 		wait= new WebDriverWait(driver, (50));
-		driver.get("https://clickezy-dev.netlify.app/");
-		Thread.sleep(1000);
+		
+//		Thread.sleep(1000);
 		
 	}
 	

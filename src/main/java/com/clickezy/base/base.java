@@ -24,7 +24,7 @@ public class base extends Devices {
 		
 	protected By city = By.xpath("//p[@class='text-lg md:text-base text-gray-800 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
-	protected By createAc = By.xpath("//a[@class='flex-grow-0 flex-shrink-0 text-base font-medium text-center text-white']");
+	protected By createAc = By.xpath("//a[text()='Create account']");
 	protected By newMail = By.xpath("//input[@name='email_number']");
 	protected By checkbox = By.xpath("//input[@type='checkbox']");
 	protected By resend = By.xpath("//button[text()='resend']");
@@ -67,6 +67,8 @@ public class base extends Devices {
 	protected By location = By.xpath("//div[@class=' css-yrenfx-control']");
 	protected By Banivihar = By.xpath("//div[@id='react-select-:r15:-option-0']");
 	protected By timeIncrease = By.xpath("//button[text()='+']");
+	
+	protected By CreatAc = By.xpath("//a[text()='Create account']");
 	
 	
 	

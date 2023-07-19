@@ -10,6 +10,7 @@ public class Signup extends base {
 	
 	@Test
 	protected void signup() throws ElementNotInteractableException, Exception {
+		driver.get("https://clickezy-dev.netlify.app/");
 		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createAc)).click();
