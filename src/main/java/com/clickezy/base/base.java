@@ -21,9 +21,7 @@ public class base extends Devices {
 	
 	String title;
 	String actualTitle;
-	String h = "07";
-	String m = "09";
-	
+		
 	protected By city = By.xpath("//p[@class='text-lg md:text-base text-gray-800 truncate dark:text-white']");
 	protected By credential = By.xpath("//*[@id=\"__next\"]/main/div/header[1]/div/div[3]/a[3]");
 	protected By createAc = By.xpath("//a[@class='flex-grow-0 flex-shrink-0 text-base font-medium text-center text-white']");
@@ -97,9 +95,7 @@ public class base extends Devices {
 		JavascriptExecutor je = (JavascriptExecutor)driver;
 		je.executeScript("window.scrollBy(0,200)");
 		driver.findElement(By.xpath("//textarea")).sendKeys("Testing");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(location)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Banivihar)).click();
+		
 		
 		
 //		System.out.println("hrs: "+hrs);

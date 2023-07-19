@@ -13,5 +13,8 @@ public class BookNow extends base {
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow)).click();
 		BookForm(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(location)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Banivihar)).click();
 	}
 }

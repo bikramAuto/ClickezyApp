@@ -23,6 +23,7 @@ public class Signup extends base {
 		SignupInformation();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cnfm)).click();
 		System.out.println("New A/c: "+ NewMail);
+		System.out.println("New MobNo.: "+ mob);
 		driver.quit();
 //		driver.findElement(checkbox).click();
 //		MailSAC();
