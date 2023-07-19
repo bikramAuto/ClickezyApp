@@ -83,7 +83,8 @@ public class base extends Devices {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(studioname)).sendKeys(StudioName);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(pName)).sendKeys(NewID);
-		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,200)");
 		
 	}
 	

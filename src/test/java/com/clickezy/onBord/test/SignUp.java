@@ -18,6 +18,7 @@ public class SignUp extends base {
 		sotp(wait);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		OnbordSignupInformation(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Continue)).click();
 		
 	}
 
