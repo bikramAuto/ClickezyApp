@@ -74,9 +74,15 @@ public class base extends Devices {
 	protected By Verify = By.xpath("//button[text()='Click here to verify']");
 	protected By studioname = By.xpath("//input[@name='studioName']");
 	protected By pName = By.xpath("//input[@name='name']");
+	protected By birthDay = By.xpath("//p[text()='Birthday']");
+	protected By Wedding = By.xpath("//p[text()='Wedding']");
 	
 	
-	protected void OnbordSignupInformation(WebDriverWait wait) throws Exception {
+	protected void preference(WebDriverWait wait) throws ElementNotInteractableException, Exception {
+		
+	}
+	
+	protected void OnbordSignupInformation(WebDriverWait wait) throws ElementNotInteractableException, Exception {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(phone)).sendKeys(mob);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Verify)).click();		
 		sotp(wait);
@@ -88,7 +94,7 @@ public class base extends Devices {
 		
 	}
 	
-	protected void sotp(WebDriverWait wait) throws Exception {		
+	protected void sotp(WebDriverWait wait) throws ElementNotInteractableException, Exception {		
 		char[] otp = Otp.toCharArray();
 		System.out.println("inside sOtp");
 		for (int i = 0; i < otp.length; i++) {
