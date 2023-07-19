@@ -3,12 +3,12 @@ package com.clickezy.base.data;
 public class Data {
 	
 	//SignUp
-	protected String NewID = "demo114";
+	protected String NewID = "demo115";
 	protected String NewMail = NewID+"@mailsac.com";
 	protected String psw = "Demo@123";
 	protected String Otp = "1234";
 	protected String Name = "demo";
-	protected String mob = "9937123484";
+	protected String mob = "9937123485";
 	
 	protected String add = "Demo";
 	protected String lmark = "demo";
