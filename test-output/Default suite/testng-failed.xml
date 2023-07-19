@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.clickezy.onBord.test.SignUp">
+      <class name="com.clickezy.user.test.BookNow">
         <methods>
-          <include name="Signup"/>
           <include name="lunch"/>
+          <include name="bookNow"/>
         </methods>
-      </class> <!-- com.clickezy.onBord.test.SignUp -->
+      </class> <!-- com.clickezy.user.test.BookNow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
