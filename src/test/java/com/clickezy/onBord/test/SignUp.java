@@ -2,6 +2,7 @@ package com.clickezy.onBord.test;
 
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.clickezy.base.base;
@@ -19,7 +20,8 @@ public class SignUp extends base {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
 		OnbordSignupInformation(wait);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Continue)).click();
-		
+		preference(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
 	}
 
 }

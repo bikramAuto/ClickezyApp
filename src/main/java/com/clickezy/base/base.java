@@ -76,9 +76,15 @@ public class base extends Devices {
 	protected By pName = By.xpath("//input[@name='name']");
 	protected By birthDay = By.xpath("//p[text()='Birthday']");
 	protected By Wedding = By.xpath("//p[text()='Wedding']");
+	protected By Citi = By.xpath("//p[text()='Bhubaneswar']");
 	
 	
 	protected void preference(WebDriverWait wait) throws ElementNotInteractableException, Exception {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(birthDay)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Wedding)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Citi)).click();
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,100)");
 		
 	}
 	
@@ -180,6 +186,7 @@ public class base extends Devices {
 	
 //	@Test
 	protected void MailSignIn(WebDriverWait wait) throws Exception {
+		driver.get("https://clickezy-dev.netlify.app/");
 		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
