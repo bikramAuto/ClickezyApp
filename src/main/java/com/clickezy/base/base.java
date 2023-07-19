@@ -43,7 +43,10 @@ public class base extends Devices {
 	protected By cnfm = By.xpath("//button[@type='submit']");
 	protected By login = By.xpath("//button[text()='Login']");
 	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-lg text-center text-white']");
-	protected By BookNow = By.xpath("(//a[text()='Book Now'])[1]");
+	protected By BookNow1 = By.xpath("(//a[text()='Book Now'])[1]");
+	protected By BookNow2 = By.xpath("(//a[text()='Book Now'])[3]");
+	protected By BookNow3 = By.xpath("(//a[text()='Book Now'])[4]");
+	protected By BookNow4 = By.xpath("(//a[text()='Book Now'])[5]");
 	protected By Bookstudio = By.xpath("(//button[@class='formInput w-full flex justify-between false'])[3]");
 	protected By Bookfor = By.xpath("(//button[@class='formInput w-full flex justify-between false'])[1]");
 	protected By BookForCategory = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-xs font-medium text-center text-white']");

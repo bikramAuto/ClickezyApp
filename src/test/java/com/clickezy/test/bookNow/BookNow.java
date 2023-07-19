@@ -11,7 +11,7 @@ public class BookNow extends base {
 	protected void bookNow() throws Exception {
 		MailSignIn(wait);
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow1)).click();
 		BookForm(wait);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(location)).click();
