@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-21T12:37:59 IST" name="Default suite" finished-at="2023-07-21T12:38:17 IST" duration-ms="17689">
+  <suite started-at="2023-07-21T14:02:18 IST" name="Default suite" finished-at="2023-07-21T14:02:30 IST" duration-ms="11602">
     <groups>
     </groups>
-    <test started-at="2023-07-21T12:37:59 IST" name="Default test" finished-at="2023-07-21T12:38:17 IST" duration-ms="17689">
-      <class name="com.clickezy.onBord.test.SignUp">
-        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.onBord.test.SignUp@20deea7f]" started-at="2023-07-21T12:37:59 IST" name="lunch" finished-at="2023-07-21T12:38:02 IST" duration-ms="2482" status="PASS">
+    <test started-at="2023-07-21T14:02:18 IST" name="Default test" finished-at="2023-07-21T14:02:30 IST" duration-ms="11602">
+      <class name="com.clickezy.user.test.BookNow">
+        <test-method is-config="true" signature="lunch()[pri:0, instance:com.clickezy.user.test.BookNow@20deea7f]" started-at="2023-07-21T14:02:18 IST" name="lunch" finished-at="2023-07-21T14:02:20 IST" duration-ms="2020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunch -->
-        <test-method signature="Signup()[pri:0, instance:com.clickezy.onBord.test.SignUp@20deea7f]" started-at="2023-07-21T12:38:02 IST" name="Signup" finished-at="2023-07-21T12:38:17 IST" duration-ms="15164" status="PASS">
+        <test-method signature="bookNow()[pri:0, instance:com.clickezy.user.test.BookNow@20deea7f]" started-at="2023-07-21T14:02:20 IST" name="bookNow" finished-at="2023-07-21T14:02:30 IST" duration-ms="9540" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Signup -->
-      </class> <!-- com.clickezy.onBord.test.SignUp -->
+        </test-method> <!-- bookNow -->
+      </class> <!-- com.clickezy.user.test.BookNow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
