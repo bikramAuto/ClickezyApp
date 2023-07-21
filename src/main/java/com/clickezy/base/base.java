@@ -68,6 +68,7 @@ public class base extends Devices {
 	protected By Banivihar = By.xpath("//div[text()='Vani Vihar']");
 	protected By timeIncrease = By.xpath("//span[@aria-label='plus']");
 	protected By lendmark = By.xpath("//input[@placeholder='Enter Land mark']");
+	protected By payNow = By.xpath("//p[text()='Pay Now']");
 	
 	protected By Newmail = By.xpath("//input[@name='email']");
 	protected By Continue = By.xpath("//button[text()='Continue']");
