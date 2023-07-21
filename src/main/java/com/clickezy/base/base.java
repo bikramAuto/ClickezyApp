@@ -65,8 +65,9 @@ public class base extends Devices {
 	protected By minFream = By.xpath("(//ul[@class='ant-picker-time-panel-column'])[2]");
 	protected By next = By.xpath("//button[text()='Next']");
 	protected By location = By.xpath("//div[@class=' css-yrenfx-control']");
-	protected By Banivihar = By.xpath("//div[@id='react-select-:r15:-option-0']");
-	protected By timeIncrease = By.xpath("//button[text()='+']");
+	protected By Banivihar = By.xpath("//div[text()='Vani Vihar']");
+	protected By timeIncrease = By.xpath("//span[@aria-label='plus']");
+	protected By lendmark = By.xpath("//input[@placeholder='Enter Land mark']");
 	
 	protected By Newmail = By.xpath("//input[@name='email']");
 	protected By Continue = By.xpath("//button[text()='Continue']");

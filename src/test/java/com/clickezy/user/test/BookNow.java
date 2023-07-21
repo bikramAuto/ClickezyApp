@@ -16,5 +16,6 @@ public class BookNow extends base {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(location)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Banivihar)).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lendmark)).sendKeys("Testing");
 	}
 }
