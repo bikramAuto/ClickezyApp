@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.clickezy.base.base;
 
-public class Signup extends base {
+public class USignup extends base {
 	
 	@Test
 	protected void signup() throws ElementNotInteractableException, Exception {

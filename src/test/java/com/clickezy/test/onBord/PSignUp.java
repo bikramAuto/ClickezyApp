@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.clickezy.base.base;
 
-public class SignUp extends base {
+public class PSignUp extends base {
 	@Test
 	protected void Signup() throws ElementNotInteractableException, Exception {
 		driver.get("https://frontend.staging.clickezy.com/onboard/");

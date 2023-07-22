@@ -2,7 +2,7 @@ package com.clickezy.test;
 
 import org.testng.TestNG;
 
-import com.clickezy.test.user.Signup;
+import com.clickezy.test.user.USignup;
 
 public class TestRunner {
 	
@@ -11,7 +11,7 @@ public class TestRunner {
 
 	public static void main(String[] args) {
 		testNg = new TestNG();
-		testNg.setTestClasses(new Class[] { Signup.class });
+		testNg.setTestClasses(new Class[] { USignup.class });
 		testNg.run();
 
 	}

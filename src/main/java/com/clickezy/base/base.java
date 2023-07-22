@@ -83,7 +83,7 @@ public class base extends Devices {
 	protected By mail = By.xpath("//input[@placeholder='Enter email / mobile number']");
 	
 	
-	@Test
+//	@Test
 	protected void StudioMailSignIn() throws ElementNotInteractableException, Exception {	
 		driver.get("https://frontend.staging.clickezy.com/onboard/");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mail)).sendKeys(Smail);
