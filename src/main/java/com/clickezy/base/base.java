@@ -1,7 +1,6 @@
 package com.clickezy.base;
 
 import java.util.List;
-
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
@@ -13,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import com.clickezy.base.devices.Devices;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -41,7 +42,7 @@ public class base extends Devices {
 	protected By pin = By.xpath("//input[@name='address[0].zip']");
 	protected By verify = By.xpath("//button[text()='click here to verify ']");
 	protected By cnfm = By.xpath("//button[@type='submit']");
-	protected By login = By.xpath("//button[text()='Login']");
+	protected By login = By.xpath("//button[text()='Login']");//button[text()='Login']
 	protected By sOtpTitle = By.xpath("//p[@class='flex-grow-0 flex-shrink-0 text-lg text-center text-white']");
 	protected By BookNow1 = By.xpath("(//a[text()='Book Now'])[1]");
 	protected By BookNow2 = By.xpath("(//a[text()='Book Now'])[3]");
@@ -79,6 +80,17 @@ public class base extends Devices {
 	protected By birthDay = By.xpath("//p[text()='Birthday']");
 	protected By Wedding = By.xpath("//p[text()='Wedding']");
 	protected By Citi = By.xpath("//p[text()='Bhubaneswar']");
+	protected By mail = By.xpath("//input[@placeholder='Enter email / mobile number']");
+	
+	
+	@Test
+	protected void StudioMailSignIn() throws ElementNotInteractableException, Exception {	
+		driver.get("https://frontend.staging.clickezy.com/onboard/");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mail)).sendKeys(Smail);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
+		sotp(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+	}
 	
 	
 	protected void preference(WebDriverWait wait) throws ElementNotInteractableException, Exception {
