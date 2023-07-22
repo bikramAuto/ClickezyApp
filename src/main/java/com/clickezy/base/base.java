@@ -157,6 +157,7 @@ public class base extends Devices {
 	
 //	@Test
 	protected void MobSignIn(WebDriverWait wait) throws Exception {
+		driver.get("https://clickezy-dev.netlify.app/");
 		SelectCity(wait);
 		driver.findElement(credential).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newMail)
