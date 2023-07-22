@@ -1,4 +1,4 @@
-package com.clickezy.onBord.test;
+package com.clickezy.test.onBord;
 
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
