@@ -82,6 +82,14 @@ public class base extends Devices {
 	protected By Citi = By.xpath("//p[text()='Bhubaneswar']");
 	protected By mail = By.xpath("//input[@placeholder='Enter email / mobile number']");
 	
+//	@Test
+	protected void SnumSignin() throws ElementNotInteractableException, Exception {
+		driver.get("https://frontend.staging.clickezy.com/onboard/");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mail)).sendKeys(Smob);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(login)).click();
+		sotp(wait);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Osubmit)).click();
+	}
 	
 //	@Test
 	protected void StudioMailSignIn() throws ElementNotInteractableException, Exception {	

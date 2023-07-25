@@ -25,7 +25,7 @@ public class USignup extends base {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cnfm)).click();
 		System.out.println("New A/c: "+ NewMail);
 		System.out.println("New MobNo.: "+ mob);
-		driver.quit();
+//		driver.quit();
 //		driver.findElement(checkbox).click();
 //		MailSAC();
 		
