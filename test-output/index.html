@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\colbi\AppData\Local\Temp\testng-eclipse-1014605651\testng-customsuite.xml</span>
+                    <span>C:\Users\colbi\AppData\Local\Temp\testng-eclipse-2122363989\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.clickezy.test.onBord.PSignUp" class="method navigator-link" hash-for-method="Signup">Signup</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.clickezy.test.user.BookNow" class="method navigator-link" hash-for-method="bookNow">bookNow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,20 +122,19 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.clickezy.test.onBord.PSignUp</span>
+              <span class="class-name">com.clickezy.test.user.BookNow</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Signup">
-                  </a> <!-- Signup -->
-                  <span class="method-name">Signup</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//input[@name=&apos;otp&apos;])[1] (tried for 50 second(s) with 500 milliseconds interval)
+                  <a name="bookNow">
+                  </a> <!-- bookNow -->
+                  <span class="method-name">bookNow</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[text()=&apos;07&apos;])[1] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.clickezy.base.base.sotp(base.java:131)
-	at com.clickezy.base.base.OnbordSignupInformation(base.java:116)
-	at com.clickezy.test.onBord.PSignUp.Signup(PSignUp.java:20)
+	at com.clickezy.base.base.BookForm(base.java:158)
+	at com.clickezy.test.user.BookNow.bookNow(BookNow.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -164,15 +163,15 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//input[@name=&apos;otp&apos;])[1]&quot;}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[text()=&apos;07&apos;])[1]&quot;}
   (Session info: chrome=114.0.5735.199)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-28RBSED&apos;, ip: &apos;192.168.177.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\colbi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ea0fb460759d3d681e29ca3ba401e14
-*** Element info: {Using=xpath, value=(//input[@name=&apos;otp&apos;])[1]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\colbi\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62406}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 316f2433a5a2a108d99268d75cadec08
+*** Element info: {Using=xpath, value=(//div[text()=&apos;07&apos;])[1]}
 	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -190,7 +189,7 @@ Session ID: 6ea0fb460759d3d681e29ca3ba401e14
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 31 more
+	... 30 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -200,7 +199,7 @@ Session ID: 6ea0fb460759d3d681e29ca3ba401e14
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\colbi\AppData\Local\Temp\testng-eclipse-1014605651\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\colbi\AppData\Local\Temp\testng-eclipse-2122363989\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -209,7 +208,7 @@ Session ID: 6ea0fb460759d3d681e29ca3ba401e14
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.clickezy.test.onBord.PSignUp&quot;/&gt;
+      &lt;class name=&quot;com.clickezy.test.user.BookNow&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -251,14 +250,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Signup')
-data.setCell(0, 2, 'com.clickezy.test.onBord.PSignUp')
-data.setCell(0, 3, 53128);
+data.setCell(0, 1, 'bookNow')
+data.setCell(0, 2, 'com.clickezy.test.user.BookNow')
+data.setCell(0, 3, 38335);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 53 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -284,7 +283,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.clickezy.test.onBord.PSignUp</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.clickezy.test.user.BookNow</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">lunch</span>
                 <span class="method-start">0 ms</span>
@@ -292,8 +291,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Signup</span>
-                <span class="method-start">2328 ms</span>
+                <span class="method-name">bookNow</span>
+                <span class="method-start">2043 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

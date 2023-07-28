@@ -9,7 +9,7 @@ import com.clickezy.base.base;
 public class PSignUp extends base {
 	@Test
 	protected void Signup() throws ElementNotInteractableException, Exception {
-		driver.get("https://frontend.staging.clickezy.com/onboard/");
+		driver.get("https://clickezy-dev-onboard.netlify.app/");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createAc)).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Newmail)
 				).sendKeys(NewMail);

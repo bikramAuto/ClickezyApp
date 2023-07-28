@@ -1,5 +1,6 @@
 package com.clickezy.test.user;
 
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -9,8 +10,8 @@ import com.clickezy.base.base;
 public class BookNow extends base {
 	
 	@Test
-	protected void bookNow() throws Exception {
-		MailSignIn(wait);
+	protected void bookNow() throws ElementNotInteractableException, Throwable {
+		MobSignIn(wait);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BookNow1)).click();
 		BookForm(wait);
