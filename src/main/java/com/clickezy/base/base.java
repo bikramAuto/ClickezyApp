@@ -56,7 +56,7 @@ public class base extends Devices {
 	protected By bookingDay = By.xpath("//div[text()='Day']");
 	protected By bookingHour = By.xpath("//div[text()='Hourly']");
 	protected By selectDate = By.xpath("//input[@placeholder='Select date']");
-	protected By date = By.xpath("//div[text()='31']");
+	protected By date = By.xpath("//div[text()='20']");
 	protected By selectTime = By.xpath("//input[@placeholder='Select time']");
 	protected By Hrs = By.xpath("(//div[text()='"+ h +"'])[1]");
 	protected By min = By.xpath("(//div[text()='"+ m +"'])[2]");

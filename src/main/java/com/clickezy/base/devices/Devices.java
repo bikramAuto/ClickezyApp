@@ -28,7 +28,7 @@ public class Devices extends Data {
 		options.setExperimentalOption("prefs", prefs);		
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
-		wait= new WebDriverWait(driver, (30));
+		wait= new WebDriverWait(driver, (50));
 		
 //		Thread.sleep(1000);
 		
