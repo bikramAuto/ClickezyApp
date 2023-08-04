@@ -3,12 +3,12 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="com.clickezy.test.signup.Signup">
+      <class name="com.clickezy.test.user.BookNow">
         <methods>
-          <include name="signup"/>
           <include name="lunch"/>
+          <include name="bookNow"/>
         </methods>
-      </class> <!-- com.clickezy.test.signup.Signup -->
+      </class> <!-- com.clickezy.test.user.BookNow -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->
