@@ -56,13 +56,13 @@ public class base extends Devices {
 	protected By bookingDay = By.xpath("//div[text()='Day']");
 	protected By bookingHour = By.xpath("//div[text()='Hourly']");
 	protected By selectDate = By.xpath("//input[@placeholder='Select date']");
-	protected By date = By.xpath("//div[text()='20']");
+	protected By date = By.xpath("(//div[text()='4'])[1]");
 	protected By selectTime = By.xpath("//input[@placeholder='Select time']");
 	protected By Hrs = By.xpath("(//div[text()='"+ h +"'])[1]");
 	protected By min = By.xpath("(//div[text()='"+ m +"'])[2]");
 	protected By tOk = By.xpath("//span[text()='OK']");
 	protected By minFream = By.xpath("(//ul[@class='ant-picker-time-panel-column'])[2]");
-	protected By next = By.xpath("//button[text()='Next']");
+	protected By next = By.xpath("//button[@class='btn-primary self-stretch md:self-auto']");
 	protected By location = By.xpath("//div[@class=' css-yrenfx-control']");
 	protected By Banivihar = By.xpath("//div[text()='Vani Vihar']");
 	protected By timeIncrease = By.xpath("//span[@aria-label='plus']");

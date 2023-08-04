@@ -26,7 +26,7 @@ public class USignup extends base {
 		System.out.println("New A/c: "+ NewMail);
 		System.out.println("New MobNo.: "+ mob);
 		Thread.sleep(1000);
-		driver.quit();
+//		driver.quit();
 //		driver.findElement(checkbox).click();
 //		MailSAC();
 		

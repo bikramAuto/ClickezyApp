@@ -12,7 +12,10 @@ public class TestRunner {
 	public static void main(String[] args) {
 		testNg = new TestNG();
 		testNg.setTestClasses(new Class[] { BookNow.class });
-		testNg.run();
+		for(int i=0; i>2; i++) {
+			testNg.run();
+		}
+		
 
 	}
 
