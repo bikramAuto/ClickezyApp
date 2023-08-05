@@ -5,7 +5,6 @@
     <classes>
       <class name="com.clickezy.test.user.BookNow">
         <methods>
-          <include name="bookNow1"/>
           <include name="lunch"/>
           <include name="bookNow"/>
         </methods>
